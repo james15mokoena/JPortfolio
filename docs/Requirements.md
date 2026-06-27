@@ -1,7 +1,5 @@
 # Project: JPortfolio
 
----
-
 ## Use Cases
 
 1. Log in
