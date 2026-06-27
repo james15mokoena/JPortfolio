@@ -15,6 +15,7 @@
 9. Update user account.
 10. Delete user account.
 11. View user account.
+12. View about me.
 
 ---
 
@@ -107,4 +108,13 @@ Extensions
 
 2a. No projects found
     1. System informs the user that no projects were found.
+```
+
+```
+Use Case: View about me.
+Input: None
+Output: Display an about me page providing information about me.
+1. User visits the website's about me page.
+2. System fetches information about me.
+3. System displays the about me page.
 ```
