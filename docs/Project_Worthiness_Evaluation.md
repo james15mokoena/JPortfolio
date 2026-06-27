@@ -15,6 +15,8 @@
 6. What happens if the problem is not solved?
     - I will have to keep talking about the solutions I have worked on without easily demonstrating them by sharing my portfolio with the interested person.
 
+---
+
 ##  Value Proposition
 
 1. Does this solution increase revenue for me? If so, how?
@@ -24,6 +26,8 @@
 3. Does it save time? If so, how?
     - Yes, because I no longer have to only talk about my proof of work, but can now easily show the interested person my portfolio.
 
+---
+
 ## Urgency & Demand
 
 1. Is this solution a must have or a nice-to-have?
@@ -31,12 +35,16 @@
 2. How urgently do I need this solution?
     - I need it as soon as I can finish it, so that I can then upload my projects for my next marketing.
 
+---
+
 ## Customer Commitment
 
 1. Am I willing to spend money for this solution to be publicly available?
     - Yes.
 2. How much am I willing to pay?
     - With my current financial state, it will depend on the monthly hosting costs.
+
+---
 
 ## Scope
 

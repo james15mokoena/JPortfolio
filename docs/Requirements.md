@@ -1,5 +1,7 @@
 # Project: JPortfolio
 
+---
+
 ## Use Cases
 
 1. Log in
@@ -13,6 +15,8 @@
 9. Update user account.
 10. Delete user account.
 11. View user account.
+
+---
 
 ## User Scenarios
 
