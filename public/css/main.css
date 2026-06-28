@@ -63,10 +63,9 @@ footer{
     justify-content: center;
     align-items: center;
     background-color: darkgray;
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
     font-size: 25px;
-    bottom: 0;
 }
 
 .dropdown{
@@ -96,10 +95,13 @@ footer{
     padding: 10px;
     font-size: 18px;
     color: black;
+}
+
+.drop-item span{
     border-bottom: 1px solid black;
 }
 
-.drop-item:hover{
+.drop-item span:hover{
     background-color: cadetblue;
 }
 

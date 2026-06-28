@@ -1,0 +1,127 @@
+.login-cnt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    /*border: 2px solid black;*/
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 60%;
+    background-color: darkgray;
+    border-radius: 60px;
+}
+
+.login-lbl{
+    font-size: 30px;
+    margin: 10px;
+}
+
+.login-inp{
+    margin: 15px;
+    width:  clamp(300px, 90%, 600px);
+    font-size: 25px;
+    border: none;
+    border-radius: 9px;
+    padding: 10px;
+}
+
+.login-btn{
+    margin: 10px;
+    height: 40px;
+    width: 160px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+
+.login-status{
+    display: none;
+    margin: 15px;
+    font-size: 25px;
+}
+
+@media (min-width: 779px) and (max-width: 1393px) {
+    .login-form{
+        width: 55%;
+    }
+}
+
+@media (min-width: 736px) and (max-width: 778px) {
+    .login-form{
+        width: 75%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 735px) {
+    .login-form{
+        width: 95%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 599px) {
+
+    .login-form{
+        width: 95%;
+    }
+
+    .login-inp{
+        width: 80%;
+    }
+}
+
+@media (max-width: 399px) {
+    
+    .login-form{
+        width: 95%;
+    }
+
+    .login-inp{
+        width: 80%;
+    }
+}
+
+@media (orientation: landscape) and (min-height: 691px) and (max-height: 1291px) {
+    
+    .login-form{
+        height: 70%;
+    }
+}
+
+@media (orientation: landscape) and (min-height: 624px) and (max-height: 690px) {
+    
+    .login-form{
+        height: 75%;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 623px) {
+    
+    .login-cnt{
+        padding: 40px;
+    }
+
+    .login-form{
+        height: 100%;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        margin: 20px;
+    }
+}
+
+/* HANDLE RESPONSIVENESS IN LANDSCAPE ALSO!!! */
+
+/*@media (orientation: landscape) and (min-height: 500px) and (max-height: 623px) {
+    
+    .login-form{
+        height: 95%;
+    }
+}*/
