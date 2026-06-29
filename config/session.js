@@ -8,7 +8,7 @@ const sessionStore = new MySQLStore({}, connectionPool);
 const FIFTEEN_MINUTES = 15 * 60 * 1000;
 
 module.exports = session({
-    secret: "secret", //process.env.SESSION_SECRET,
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     store: sessionStore,

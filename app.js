@@ -24,6 +24,8 @@ app.use(session);
 // register core request handlers
 routes.registerRequestHandlers(app);
 
-app.listen(4000,"192.168.43.172", function () {
+app.listen(4000, function () {
     console.log(`JPortfolio is running on port: 4000...`);
 });
+
+// IP ADDRESS: "192.168.43.172"

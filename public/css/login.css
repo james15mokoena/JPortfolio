@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     /*border: 2px solid black;*/
 }
 
@@ -40,7 +40,12 @@
     font-size: 25px;
     font-weight: bold;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
+    background-color: lightskyblue;
+}
+
+.login-btn:hover{
+    background-color: lightgrey;
 }
 
 .login-status{
