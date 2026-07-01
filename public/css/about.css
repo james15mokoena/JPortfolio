@@ -1,0 +1,52 @@
+.about-cnt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border: 2px solid rebeccapurple;*/
+    width: 70%;
+}
+
+.my-img{
+    border-radius: 50%;
+    width: 300px;
+}
+
+.img-cnt{
+    /*border: 2px solid black;*/
+    align-self: flex-start;
+}
+
+.group-cnt{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*border: 2px solid red;*/
+    width: 100%;
+}
+
+.text-cnt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+hr{
+    border: 1px solid black;
+    width: 50%;
+}
+
+p, ul li, ol li{
+    font-size: 25px;
+}
+
+.skill-cnt{
+
+}
+
+
+.intro, .skills, .experience, .education{
+    font-size: 30px;
+}

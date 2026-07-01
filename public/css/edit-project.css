@@ -1,0 +1,87 @@
+.edit-head{
+    margin-bottom: 30px;
+}
+
+.edit-cnt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border: 2px solid green;*/
+    width: 50vw;
+    height: 83vh;
+}
+
+.edit-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 25px;
+    background-color: darkgray;
+    width: 100%;
+    height: 90%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*border: 1px solid red;*/
+    width: 50vw;
+    margin: 15px;
+    padding: 10px;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-row{
+    justify-content: center;
+}
+
+.edit-btn{
+    margin-right: 20px;
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+.edit-btn:hover{
+    background-color: darkgray;
+}
+
+.edit-lbl{
+    font-size: 25px;
+}
+
+.edit-inp{
+    width: 300px;
+    font-size: 20px;
+    padding: 7px;
+    border: none;
+    border-radius: 10px;
+}
+
+.add-btn{
+    background-color: green;
+}
+
+.update-btn{
+    background-color: orange;
+}
+
+.get-data-btn{
+    background-color: yellow;
+}
+
+footer{
+    position: relative;
+}

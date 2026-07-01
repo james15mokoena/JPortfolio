@@ -2,7 +2,9 @@
 const express = require("express");
 const handlebars = require("express-handlebars");
 const session = require("./config/session.js");
-const {routes} = require("./routes.js");
+const { routes } = require("./routes.js");
+const Owner = require("./models/owner.js");
+const Project = require("./models/project.js");
 
 // create an instance of express-handlebars.
 const hbars = handlebars.create({ defaultLayout: "main" });
@@ -28,4 +30,7 @@ app.listen(4000, function () {
     console.log(`JPortfolio is running on port: 4000...`);
 });
 
-// IP ADDRESS: "192.168.43.172"
+const me = new Owner("Pheello", "123");
+console.log(me.toString());
+const pro = new Project("Brown");
+console.log(pro.toString());

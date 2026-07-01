@@ -1,8 +1,63 @@
 .home-cnt{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+    /*border: 2px solid green;*/
+}
+
+.projects-cnt{
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 80vh;
+}
+
+.slide-cnt{
+    /*border: 1px solid red;*/
+    width: 800px;
+}
+
+.home-head{
+    font-size: 40px;
+    margin-bottom: 5px;
+    /*border: 2px solid green;*/
+}
+
+.project-name{
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.project-img{
+    /*border: 1px solid yellow;*/
+}
+
+.slide{
+    border-radius: 20px;
+    height: 600px;
+    width: 100%;
+}
+
+/*footer{
+    position: relative;
+}*/
+
+.slide-btn{
+    width: 50px;
+    height: 90px;
+    border: none;
+}
+
+.slide-btn span{
+    font-size: 30px;
+}
+
+.back-btn{
+    margin-right: 10px;
+}
+
+.next-btn{
+    margin-left: 10px;
 }
