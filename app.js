@@ -7,7 +7,7 @@ const db = require("./config/database.js");
 const Project = require("./models/project.js");
 
 // create an instance of express-handlebars.
-const hbars = handlebars.create({ defaultLayout: "main" });
+const hbars = handlebars.create({ defaultLayout: "main", partialsDir: "views/partials" });
 
 // create the app
 const app = express();
@@ -19,6 +19,10 @@ app.set("view engine", "handlebars");
 
 // enable the serving of static files in the /public folder
 app.use(express.static(__dirname + "/public"));
+
+app.use(express.urlencoded({ extended: true }));
+
+app.use(express.json());
 
 // enable the use of sessions
 app.use(session);

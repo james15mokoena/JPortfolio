@@ -4,71 +4,71 @@
 
     <h1 class="edit-head">Edit Project</h1>
 
-    <form class="edit-form" action="" method="post">
+    <form class="edit-form">
 
         <div class="row">
             <div class="col">
                 <label for="inp-name" class="edit-lbl">Name:</label>
-                <input type="text" id="inp-name" class="edit-inp" placeholder="enter to get data">
+                <input name="name" type="text" id="inp-name" class="edit-inp" placeholder="enter to get data">
             </div>
 
             <div class="col">
                 <label for="inp-problem" class="edit-lbl">Problem:</label>
-                <textarea id="inp-problem" class="edit-inp ta"></textarea>
+                <textarea name="problem" id="inp-problem" class="edit-inp ta"></textarea>
             </div>
         </div>
 
         <div class="row">
             <div class="col">
                 <label for="inp-solution" class="edit-lbl">Solution:</label>
-                <textarea id="inp-solution" class="edit-inp ta"></textarea>
+                <textarea name="solution" id="inp-solution" class="edit-inp ta"></textarea>
             </div>
 
             <div class="col">
                 <label for="inp-revenue" class="edit-lbl">Revenue Impact:</label>
-                <textarea id="inp-revenue" class="edit-inp ta"></textarea>
+                <textarea name="revenueImpact" id="inp-revenue" class="edit-inp ta"></textarea>
             </div>
         </div>
 
         <div class="row">
             <div class="col">
                 <label for="inp-cost" class="edit-lbl">Cost Impact:</label>
-                <textarea id="inp-cost" class="edit-inp ta"></textarea>
+                <textarea name="costImpact" id="inp-cost" class="edit-inp ta"></textarea>
             </div>
 
             <div class="col">
                 <label for="inp-time" class="edit-lbl">Time Impact:</label>
-                <textarea id="inp-time" class="edit-inp ta"></textarea>
+                <textarea name="timeImpact" id="inp-time" class="edit-inp ta"></textarea>
             </div>
         </div>
 
         <div class="row">
             <div class="col">
                 <label for="inp-icon" class="edit-lbl">Icon Location:</label>
-                <input type="text" id="inp-icon" class="edit-inp">
+                <input name="iconLocation" type="text" id="inp-icon" class="edit-inp">
             </div>
 
             <div class="col">
                 <label for="inp-video" class="edit-lbl">Video Location:</label>
-                <input type="text" id="inp-video" class="edit-inp" />
+                <input name="videoLocation" type="text" id="inp-video" class="edit-inp" />
             </div>
         </div>
 
         <div class="row btn-row">
             <div class="col">
-                <button type="submit" class="edit-btn get-data-btn">Get Data</button>
+                <button type="button" class="edit-btn get-data-btn">Get Data</button>
             </div>
 
             <div class="col">
-                <button type="submit" class="edit-btn update-btn">Update</button>
+                <button type="button" class="edit-btn update-btn">Update</button>
             </div>
 
             <div class="col">
-                <button type="submit" class="edit-btn add-btn">Add</button>
+                <button type="button" class="edit-btn add-btn">Add</button>
             </div>
 
             <div class="col">
-                <button type="submit" class="edit-btn delete-btn">Delete</button>
+                <button type="button" class="edit-btn delete-btn">Delete</button>
             </div>
         </div>
 
@@ -81,3 +81,5 @@
     </form>
 
 </div>
+
+<script src="js/edit-project.js"></script>

@@ -215,7 +215,7 @@ async function addProject(project) {
 /**
  * Updates a project's data.
  * @param {Project} project The project to be updated.
- * @returns The updated project, or null if no update occured.
+ * @returns true if the project is updated, otherwise false.
  */
 async function updateProject(project) {
     
@@ -224,32 +224,32 @@ async function updateProject(project) {
         let isUpdated = false;
         const existingProj = await getProject(project.name);
         
-        if (project.ownerUsername !== existingProj.ownerUsername) {
+        /*if (project.ownerUsername !== existingProj.ownerUsername) {
             existingProj.ownerUsername = project.ownerUsername;
             isUpdated = true;
-        }
+        }*/
 
-        if (project.problem !== existingProj.problem) {
+        if (!project.problem && project.problem !== existingProj.problem) {
             existingProj.problem = project.problem;
             isUpdated = true;
         }
 
-        if (project.solution !== existingProj.solution) {
+        if (!project.solution && project.solution !== existingProj.solution) {
             existingProj.solution = project.solution;
             isUpdated = true;
         }
 
-        if (project.revenueImpact !== existingProj.revenueImpact) {
+        if (!project.revenueImpact && project.revenueImpact !== existingProj.revenueImpact) {
             existingProj.revenueImpact = project.revenueImpact;
             isUpdated = true;
         }
 
-        if (project.costImpact !== existingProj.costImpact) {
+        if (!project.costImpact && project.costImpact !== existingProj.costImpact) {
             existingProj.costImpact = project.costImpact;
             isUpdated = true;
         }
 
-        if (project.timeImpact !== existingProj.timeImpact) {
+        if (!project.timeImpact && project.timeImpact !== existingProj.timeImpact) {
             existingProj.timeImpact = project.timeImpact;
             isUpdated = true;
         }
@@ -264,26 +264,28 @@ async function updateProject(project) {
             isUpdated = true;
         }
 
+        console.log(`Icon location: ${project.iconLocation}`);
+        console.log("IS UPDATED: " + isUpdated);
+
         if (isUpdated === true) {
             
             const [result] = await pool.execute(
                 `UPDATE Project
-                 SET Owner_Username = ?, Problem = ?, Solution = ?, Revenue_Impact = ?, Time_Impact = ?, Cost_Impact = ?, Icon_Location = ?, Video_Location = ?
-                 WHERE Name = ?;`, [existingProj.ownerUsername, existingProj.problem, existingProj.solution, existingProj.revenueImpact, existingProj.timeImpact, existingProj.costImpact, existingProj.iconLocation, existingProj.videoLocation, existingProj.name]
+                 SET Problem = ?, Solution = ?, Revenue_Impact = ?, Time_Impact = ?, Cost_Impact = ?, Icon_Location = ?, Video_Location = ?
+                 WHERE Name = ?;`, [existingProj.problem, existingProj.solution, existingProj.revenueImpact, existingProj.timeImpact, existingProj.costImpact, existingProj.iconLocation, existingProj.videoLocation, existingProj.name]
             );
 
-            if (result.affectedRows > 0) {
-                return existingProj;
+            if (result.affectedRows > 0) {                
+                return true;
             }
             else {
                 console.log("No update.");
-                return null;
             }
         }
 
     }
 
-    return null;
+    return false;
 }
 
 /**

@@ -25,7 +25,7 @@ class Project{
         this.revenueImpact = revenueImpact;
         this.costImpact = costImpact;
         this.timeImpact = timeImpact;
-        this.iconLocation = timeImpact;
+        this.iconLocation = iconLocation;
         this.videoLocation = videoLocation;
     }
 

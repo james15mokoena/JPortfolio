@@ -20,6 +20,11 @@ function registerRequestHandlers(app) {
 
     // handles the request for the Login page.
     app.get("/login", core_handlers.login);
+
+    // handles the request for the project's data.
+    app.get("/edit-project/:name", core_handlers.getProject);
+
+    app.put("/edit-project/:name", core_handlers.updateProject);
 }
 
 /** 
