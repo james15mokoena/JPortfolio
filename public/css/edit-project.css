@@ -8,8 +8,8 @@
     justify-content: center;
     align-items: center;
     /*border: 2px solid green;*/
-    width: 50vw;
-    height: 83vh;
+    width: 80vw;
+    height: 100%;
 }
 
 .edit-form{
@@ -26,10 +26,10 @@
 
 .row{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     /*border: 1px solid red;*/
-    width: 50vw;
+    width: 100%;
     margin: 15px;
     padding: 10px;
 }
@@ -39,6 +39,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /*border: 1px solid rebeccapurple;*/
+    margin-right: 20px;
 }
 
 .btn-row{
@@ -47,7 +49,7 @@
 
 .edit-btn{
     margin-right: 20px;
-    font-size: 20px;
+    font-size: 25px;
     width: 120px;
     height: 40px;
     border: none;
@@ -63,7 +65,7 @@
 }
 
 .edit-inp{
-    width: 300px;
+    width: 800px;
     font-size: 20px;
     padding: 7px;
     border: none;
@@ -82,6 +84,20 @@
     background-color: yellow;
 }
 
+.delete-btn{
+    background-color: red;
+}
+
 footer{
     position: relative;
+}
+
+.ta{
+    resize: vertical;
+}
+
+.col-status{
+    display: none;
+    border: 1px solid red;
+    margin: 0;
 }
