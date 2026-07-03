@@ -26,10 +26,17 @@ pool.getConnection(function (err, connection) {
  * Gets existing project owners in the database.
  * @returns An array of owners.
  */
-async function getOwners() {
+async function getOwner() {
     
-    const [owners] = await pool.query(`SELECT * FROM Owner;`);
-    return owners;
+    const [owners] = await pool.query(`SELECT * FROM Owner LIMIT 1;`);
+    /*const owns = [];
+    owners.forEach((owner) => {
+        if (owner !== undefined) {
+            owns.push(owner);
+        }
+    });*/
+
+    return owners[0];
 }
 
 /**
@@ -159,6 +166,8 @@ async function getProject(projectName) {
         );
         
         const proj = project[0];
+        console.log(`Inner proj: ${proj.Name}`);
+
         return new Project(proj.Owner_Username, proj.Name, proj.Problem, proj.Solution, proj.Revenue_Impact, proj.Cost_Impact, proj.Time_Impact, proj.Icon_Location, proj.Video_Location);
     }
     else
@@ -313,7 +322,7 @@ async function deleteProject(name) {
  */
 module.exports = {
     pool,
-    getOwners,
+    getOwner,
     getPassword,
     updatePassword,
     addOwner,

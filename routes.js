@@ -24,7 +24,14 @@ function registerRequestHandlers(app) {
     // handles the request for the project's data.
     app.get("/edit-project/:name", core_handlers.getProject);
 
+    // handles the request to update a project's data.
     app.put("/edit-project/:name", core_handlers.updateProject);
+
+    // handles the request to add a new project
+    app.post("/edit-project", core_handlers.addProject);
+
+    // handles the request to delete a project.
+    app.delete("/edit-project/:name", core_handlers.deleteProject);
 }
 
 /** 

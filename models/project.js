@@ -29,6 +29,15 @@ class Project{
         this.videoLocation = videoLocation;
     }
 
+    /**
+     * Converts an appropriate object into a `Project` object.
+     * @param {object} json 
+     */
+    static toProject(obj) {
+        return new Project(
+            obj.ownerUsername, obj.name, obj.problem, obj.solution, obj.revenueImpact, obj.costImpact, obj.timeImpact, obj.iconLocation, obj.videoLocation);
+    }
+
     toString() {
         return `\nOwner: ${this.ownerUsername}\nName: ${this.name}\nProblem: ${this.problem}\nSolution: ${this.solution}\nRevenue Impact: ${this.solution}\nCost Impact: ${this.costImpact}\nTime Impact: ${this.timeImpact}\nIcon Location: ${this.iconLocation}\nVideo Location: ${this.videoLocation}\n`;
     }
