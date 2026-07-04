@@ -178,16 +178,27 @@ async function getProject(projectName) {
 
 /**
  * Gets a list of projects that the owner worked on.
- * @returns A list of projects that the owner worked on.
+ * @returns A list of `Project`\'s that the owner worked on.
  */
 async function getProjects() {
     
     const [projects] = await pool.query(`SELECT * FROM Project;`);
-    if(projects.length > 0){
-        return projects;
+    if (projects.length > 0) {
+        const projs = [];
+
+        projects.forEach((project) => {
+
+            if (project !== null && project !== undefined) {
+                
+                projs.push(new Project(project.Owner_Username, project.Name, project.Problem, project.Solution, project.Revenue_Impact, project.Cost_Impact, project.Time_Impact, project.Icon_Location, project.Video_Location));
+            }
+            
+        }); 
+
+        return projs;
     }
 
-    return [];
+    return null;
 }
 
 /**

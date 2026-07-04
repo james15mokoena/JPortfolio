@@ -1,13 +1,13 @@
 const navbarItems = document.querySelectorAll(".navbar .nav-item");
 const dropItems = document.querySelectorAll(".dropdown-menu .drop-item");
 
-window.onload = function () {
+window.addEventListener("load", function () {
 
     if (!sessionStorage.getItem("selectedNavItem")) {
         sessionStorage.setItem("selectedNavItem", "home");
         location = "http://192.168.43.172:4000/";
     }
-}
+});
 
 navbarItems.forEach(function (item) {
 

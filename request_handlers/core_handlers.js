@@ -6,7 +6,7 @@ const Project = require("../models/project.js");
  * @param {import("express").Request} req The request object.
  * @param {import("express").Response} res The response object.
  */
-function home(req, res) {
+async function home(req, res) {
     res.render("home");
 }
 
@@ -166,7 +166,7 @@ async function deleteProject(req, res) {
         const isDeleted = await db.deleteProject(req.params.name);
 
         console.log(`Is deleted: ${isDeleted}`);
-        
+
         if (isDeleted === true)
             res.status(200).send("Deleted");
         else
@@ -176,6 +176,20 @@ async function deleteProject(req, res) {
         res.status(404).send("Failed");
 }
 
+/**
+ * Handles the request to get all the projects.
+ * @param {import("express").Request} req The request object.
+ * @param {import("express").Response} res The response object.
+ */
+async function getProjects(req, res) {
+
+    const projects = await db.getProjects();
+    
+    if (projects !== null && projects !== undefined)
+        res.json(projects);
+    else
+        res.status(404).send("Not projects found");
+}
 
 /**
  * An object that contains the request handlers to be exported.
@@ -187,6 +201,7 @@ module.exports.core_handlers = {
     viewProject,
     login,
     getProject,
+    getProjects,
     updateProject,
     addProject,
     deleteProject

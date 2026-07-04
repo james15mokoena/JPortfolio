@@ -12,15 +12,15 @@ function registerRequestHandlers(app) {
     // handles the request for the About page.
     app.get("/about", core_handlers.about);
 
-    // handles the request for the Edit Project page
-    app.get("/edit-project", core_handlers.editProject);
-
     // handles the request for the View Project page
     app.get("/view-project", core_handlers.viewProject);
 
     // handles the request for the Login page.
     app.get("/login", core_handlers.login);
 
+    // handles the request for the Edit Project page
+    app.get("/edit-project", core_handlers.editProject);
+    
     // handles the request for the project's data.
     app.get("/edit-project/:name", core_handlers.getProject);
 
@@ -32,6 +32,9 @@ function registerRequestHandlers(app) {
 
     // handles the request to delete a project.
     app.delete("/edit-project/:name", core_handlers.deleteProject);
+
+    // handles the request to get all the projects
+    app.get("/projects", core_handlers.getProjects);
 }
 
 /** 

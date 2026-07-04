@@ -1,0 +1,34 @@
+.view-project-cnt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.proj-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+p{
+    font-size: 25px;
+}
+
+.problem-cnt, .solution-cnt, .revenue-cnt, .cost-cnt, .time-cnt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    /*border: 1px solid rebeccapurple;*/
+}
+
+.problem, .solution, .revenue, .cost, .time{
+    background-color: darkgray;
+    margin-top: 0;
+}
+
