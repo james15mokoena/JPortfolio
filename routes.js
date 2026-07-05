@@ -18,6 +18,13 @@ function registerRequestHandlers(app) {
     // handles the request for the Login page.
     app.get("/login", core_handlers.login);
 
+    // handles the request that checks if owner is logged in.
+    app.get("/check-login", core_handlers.checkLogin);
+
+    app.post("/login", core_handlers.attemptLogin);
+
+    app.get("/logout", core_handlers.logout);
+
     // handles the request for the Edit Project page
     app.get("/edit-project", core_handlers.editProject);
     

@@ -1,5 +1,7 @@
+const session = require("express-session");
 const db = require("../config/database.js");
 const Project = require("../models/project.js");
+const { json } = require("express");
 
 /**
  * Handles the request for the home page.
@@ -44,6 +46,56 @@ function viewProject(req, res) {
  */
 function login(req, res) {
     res.render("login");
+}
+
+/**
+ * Handles the request to logout.
+* @param {import("express").Request} req The request object.
+* @param {import("express").Response} res The response object.
+ */
+function logout(req, res) {
+
+    req.session.destroy(err => {
+       
+        if (err)
+            return res.status(500).send("Failed to log out.");
+
+        res.clearCookie("connect.sid");
+        res.redirect("/login");
+    });
+}
+
+/**
+ * Handles the request to log in.
+* @param {import("express").Request} req The request object.
+* @param {import("express").Response} res The response object.
+ */
+async function attemptLogin(req, res) {
+
+    const body = req.body;
+
+    const isLoggedIn = await db.login(body.username, body.password);
+
+    if (isLoggedIn === true) {
+
+        req.session.username = body.username;
+        res.status(200).send();
+    }
+    else
+        res.status(404).send();
+}
+
+/**
+ * Handles the request to check if the user is logged in.
+* @param {import("express").Request} req The request object.
+* @param {import("express").Response} res The response object.
+ */
+async function checkLogin(req, res) {
+
+    if (req.session.username)
+        res.status(200).json({ isLoggedIn: true });
+    else
+        res.status(200).json({ isLoggedIn: false });    
 }
 
 /**
@@ -200,6 +252,9 @@ module.exports.core_handlers = {
     editProject,
     viewProject,
     login,
+    checkLogin,
+    attemptLogin,
+    logout,
     getProject,
     getProjects,
     updateProject,

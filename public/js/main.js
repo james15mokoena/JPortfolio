@@ -1,11 +1,55 @@
 const navbarItems = document.querySelectorAll(".navbar .nav-item");
 const dropItems = document.querySelectorAll(".dropdown-menu .drop-item");
+const loginLnk = document.querySelector(".navbar .login");
+const dropLoginLnk = document.querySelector(".dropdown-menu .login");
+const projectLnk = document.querySelector(".navbar .project");
+const dropProjectLnk = document.querySelector(".dropdown-menu .project");
 
-window.addEventListener("load", function () {
+/**
+ * Checks if a string value is not null and not undefined.
+ * @param {string} strValue A string value;
+ * @returns true if not null and not undefined, otherwise false.
+ */
+function isNotNullOrUndefined(strValue) {
+    return strValue !== null && strValue !== undefined;
+}
+
+window.addEventListener("load", async function () {
+
+    const response = await fetch("/check-login");
+
+    if (response.ok) {
+        
+        const data = await response.json();
+
+        if (data.isLoggedIn === true) {
+
+            loginLnk.textContent = "Logout";
+            loginLnk.setAttribute("href", "/logout");
+
+            dropLoginLnk.textContent = "Logout";
+            dropLoginLnk.setAttribute("href", "/logout");
+
+            // display the project link
+            projectLnk.style.display = "flex";
+            dropProjectLnk.style.display = "flex";
+        }
+        else {
+            loginLnk.textContent = "Login";
+            loginLnk.setAttribute("href", "/login");
+
+            dropLoginLnk.textContent = "Login";
+            dropLoginLnk.setAttribute("href", "/login");
+
+            // hide the project link
+            projectLnk.style.display = "none";
+            dropProjectLnk.style.display = "none";
+        }
+    }
 
     if (!sessionStorage.getItem("selectedNavItem")) {
         sessionStorage.setItem("selectedNavItem", "home");
-        location = "http://192.168.43.172:4000/";
+        location = "/";
     }
 });
 

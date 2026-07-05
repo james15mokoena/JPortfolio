@@ -2,19 +2,21 @@
 
 <div class="login-cnt">
 
-    <form class="login-form" method="post" action="">
+    <form class="login-form">
 
         <h1 class="login-heading">LOGIN</h1>
 
         <label for="inp-username" class="login-lbl">Username:</label>
-        <input type="text" class="login-inp" id="inp-username" required/>
+        <input type="text" name="username" class="login-inp" id="inp-username" required/>
 
         <label for="inp-password" class="login-lbl">Password:</label>
-        <input type="password" class="login-inp" id="inp-password" required/>
+        <input type="password" name="password" class="login-inp" id="inp-password" required/>
 
-        <button type="submit" class="login-btn">Proceed</button>
+        <button type="button" class="login-btn">Proceed</button>
 
-        <p class="login-status">Status</p>
+        <p class="login-status"></p>
 
     </form>
 </div>
+
+<script src="/js/login.js"></script>

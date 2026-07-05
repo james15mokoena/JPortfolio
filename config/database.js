@@ -23,6 +23,24 @@ pool.getConnection(function (err, connection) {
 });
 
 /**
+ * Checks if the owner with the given `username` and `password` exists.
+ * @param {string} username The owner's username.
+ * @param {string} password The owner's password.
+ * @returns true if the owner exists, otherwise false.
+ */
+async function login(username, password) {
+    
+    const [owners] = await pool.query(
+        `SELECT * FROM Owner WHERE Username = ? AND Password = ? LIMIT 1;`, [username, password]
+    );
+
+    if (owners.length === 1)
+        return true;
+
+    return false;
+}
+
+/**
  * Gets existing project owners in the database.
  * @returns An array of owners.
  */
@@ -344,5 +362,6 @@ module.exports = {
     getProject,
     getProjects,
     updateProject,
-    deleteProject
+    deleteProject,
+    login
 }
