@@ -4,14 +4,15 @@
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    width: 60%;
-    /*border: 2px solid green;*/
+    width: 100%;
+    border: 1px solid green;
 }
 
 .projects-cnt{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid rebeccapurple;
 }
 
 .slide-cnt{
@@ -34,11 +35,8 @@
     border-radius: 20px;
     height: 600px;
     width: 100%;
+    border: 1px solid yellow;
 }
-
-/*footer{
-    position: relative;
-}*/
 
 .slide-btn{
     width: 50px;
@@ -49,6 +47,13 @@
 .slide-btn span{
     font-size: 30px;
 }
+.back-btn, .next-btn{
+    border-radius: 50%;
+}
+
+.back-btn:hover, .next-btn:hover{
+    background-color: darkgray;
+}
 
 .back-btn{
     margin-right: 10px;
@@ -56,4 +61,11 @@
 
 .next-btn{
     margin-left: 10px;
+}
+
+@media (max-width: 925px) {
+    
+    .projects-cnt{
+        width: 100%;
+    }
 }
