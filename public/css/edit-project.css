@@ -94,7 +94,14 @@
 
 .col-status{
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0;
+}
+
+.status{
+    text-align: center;
 }
 
 @media (max-width: 627px) {
