@@ -3,25 +3,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*border: 2px solid rebeccapurple;*/
-    width: 70%;
+    /*border: 1px solid rebeccapurple;*/
+    width: 100%;
+}
+
+.img-cnt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .my-img{
     border-radius: 50%;
-    width: 300px;
-}
-
-.img-cnt{
-    /*border: 2px solid black;*/
-    align-self: flex-start;
+    width: 22%;
 }
 
 .group-cnt{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    /*border: 2px solid red;*/
+    justify-content: center;
     width: 100%;
 }
 
@@ -30,7 +32,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
+    width: 100%;
 }
 
 hr{
@@ -42,11 +44,14 @@ p, ul li, ol li{
     font-size: 25px;
 }
 
-.skill-cnt{
-
-}
-
-
 .intro, .skills, .experience, .education{
     font-size: 30px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    
+    .my-img{
+        width: 200px;
+    }
 }
