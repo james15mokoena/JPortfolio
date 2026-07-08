@@ -57,6 +57,6 @@ document.querySelector(".login-btn").addEventListener("click", async () => {
         }
     }
     else {
-        showStatusMessage("Provide username and Password", "block");
+        showStatusMessage("Username and Password", "block");
     }
 });
