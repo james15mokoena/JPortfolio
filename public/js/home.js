@@ -48,6 +48,8 @@ async function initProjects() {
             projectCnt.appendChild(link);
 
             const icon = document.createElement("img");
+            icon.style.maxWidth = "100%";
+            icon.style.height = "auto";
             icon.classList.add("slide");
             icon.src = exProjects[i].iconLocation;
             icon.alt = exProjects[i].name;

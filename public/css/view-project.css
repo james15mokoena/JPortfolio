@@ -11,7 +11,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 60%;
+    height: 25%;
 }
 
 p{
@@ -23,12 +24,11 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60%;
-    /*border: 1px solid rebeccapurple;*/
+    width: 85%;
+    margin: 10px;
 }
 
 .problem, .solution, .revenue, .cost, .time{
     background-color: darkgray;
     margin-top: 0;
 }
-

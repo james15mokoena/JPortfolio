@@ -13,6 +13,7 @@ window.addEventListener("load", function () {
         
         // set the project icon
         const projectIcon = document.querySelector(".project-icon");
+        projectIcon.style.width = "100%";
         projectIcon.setAttribute("src", sessionStorage.getItem("iconLocation"));
         projectIcon.setAttribute("alt", sessionStorage.getItem("projectName"));
 
