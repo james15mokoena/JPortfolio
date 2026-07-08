@@ -7,9 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*border: 2px solid green;*/
-    width: 80vw;
-    height: 100%;
+    width: 100%;
 }
 
 .edit-form{
@@ -20,7 +18,7 @@
     border: none;
     border-radius: 25px;
     background-color: darkgray;
-    width: 100%;
+    width: 90%;
     height: 90%;
 }
 
@@ -28,7 +26,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*border: 1px solid red;*/
     width: 100%;
     margin: 15px;
     padding: 10px;
@@ -39,17 +36,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*border: 1px solid rebeccapurple;*/
-    margin-right: 20px;
+    margin: 7px;
+    width: 50%;
 }
 
 .btn-row{
     justify-content: center;
 }
 
+.btn-row .col{
+    width: 150px;
+}
+
 .edit-btn{
-    margin-right: 20px;
-    font-size: 25px;
+    font-size: 20px;
     width: 120px;
     height: 40px;
     border: none;
@@ -57,7 +57,7 @@
 }
 
 .edit-btn:hover{
-    background-color: darkgray;
+    background-color: white;
 }
 
 .edit-lbl{
@@ -65,7 +65,7 @@
 }
 
 .edit-inp{
-    width: 800px;
+    width: 100%;
     font-size: 20px;
     padding: 7px;
     border: none;
@@ -88,10 +88,6 @@
     background-color: red;
 }
 
-footer{
-    position: relative;
-}
-
 .ta{
     resize: vertical;
 }
@@ -99,4 +95,19 @@ footer{
 .col-status{
     display: none;
     margin: 0;
+}
+
+@media (max-width: 627px) {
+
+    .btn-row .col{
+        width: 50%;
+    }
+
+    .edit-btn{
+        width: 100%;
+    }
+
+    .edit-lbl, .edit-inp{
+        font-size: 20px;
+    }
 }

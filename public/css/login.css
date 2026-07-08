@@ -48,7 +48,7 @@
 }
 
 .login-status{
-    display: block;
+    display: none;
     margin: 15px;
     font-size: 15px;
 }
